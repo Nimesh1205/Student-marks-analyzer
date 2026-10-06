@@ -7,12 +7,6 @@ student_marks_df=pd.read_csv("data/student_marks.csv")
 student_marks_df=student_marks_df.set_index("Roll_No")
 student_marks_df
 
-def student_info(roll_no):
-    return student_marks_df.loc[roll_no]
-
-def subject_data(roll_no):
-    return student_marks_df.loc[roll_no,"Maths":"Civics"]
-
 def student_analyzer(roll_no):
     student = student_marks_df.loc[roll_no]
     marks = student["Maths":"Civics"]
